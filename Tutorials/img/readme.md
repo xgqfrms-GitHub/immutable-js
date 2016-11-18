@@ -8,24 +8,26 @@ https://facebook.github.io/immutable-js/
 
 
 ****************************************************************************************************************
-Getting started
+## Getting started
 
-Install immutable using npm.
-
-npm install immutable
+> Install immutable using npm.
+```sh
+$ npm install immutable
+``` 
 Then require it into any module.
-
+```sh
 var Immutable = require('immutable');
 var map1 = Immutable.Map({a:1, b:2, c:3});
 var map2 = map1.set('b', 50);
 map1.get('b'); // 2
 map2.get('b'); // 50
+``` 
 Browser
 
 To use immutable from a browser, download dist/immutable.min.js or use a CDN such as CDNJS or jsDelivr.
 
 Then, add it as a script tag to your page:
-
+```sh
 <script src="immutable.min.js"></script>
 <script>
     var map1 = Immutable.Map({a:1, b:2, c:3});
@@ -225,8 +227,9 @@ assert(list2.size === 6);
 Note: immutable also provides asMutable and asImmutable, but only encourages their use when withMutations will not suffice. Use caution to not return a mutable copy, which could result in undesired behavior.
 
 Important!: Only a select few methods can be used in withMutations including set, push and pop. These methods can be applied directly against a persistent data-structure where other methods like map, filter, sort, and splice will always return new immutable data-structures and never mutate a mutable collection.
+```
 
-Documentation
+## Documentation
 
 Read the docs and eat your vegetables.
 
@@ -234,27 +237,27 @@ Docs are automatically generated from Immutable.d.ts. Please contribute!
 
 Also, don't miss the Wiki which contains articles on specific topics. Can't find something? Open an issue.
 
-Testing
+## Testing
 
 If you are using the Chai Assertion Library, Chai Immutable provides a set of assertions to use against Immutable collections.
 
-Contribution
+## Contribution
 
 Use Github issues for requests.
 
 We actively welcome pull requests, learn how to contribute.
 
-Changelog
+## Changelog
 
 Changes are tracked as Github releases.
 
-Thanks
+## Thanks
 
 Phil Bagwell, for his inspiration and research in persistent data structures.
 
 Hugh Jackson, for providing the npm package name. If you're looking for his unsupported package, see this repository.
 
-License
+## License
 
 Immutable is BSD-licensed. We also provide an additional patent grant.
 
