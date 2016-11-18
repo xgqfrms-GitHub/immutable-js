@@ -145,7 +145,8 @@ Property access for JavaScript Objects first converts the key to a string, but s
 
 Converts back to raw JavaScript objects.
 
-All immutable Iterables can be converted to plain JavaScript Arrays and Objects shallowly with toArray() and toObject() or deeply with toJS(). All Immutable Iterables also implement toJSON() allowing them to be passed to JSON.stringify directly.
+All immutable Iterables can be converted to plain JavaScript Arrays and Objects shallowly with toArray() and toObject() or deeply with toJS().   
+All Immutable Iterables also implement toJSON() allowing them to be passed to JSON.stringify directly.
 ```sh
 var deep = Immutable.Map({ a: 1, b: 2, c: Immutable.List.of(3, 4, 5) });
 deep.toObject() // { a: 1, b: 2, c: List [ 3, 4, 5 ] }
@@ -173,8 +174,11 @@ The collections in immutable are intended to be nested, allowing for deep trees 
 ```sh
 var nested = Immutable.fromJS({a:{b:{c:[3,4,5]}}});
 // Map { a: Map { b: Map { c: List [ 3, 4, 5 ] } } }
-A few power-tools allow for reading and operating on nested data. The most useful are mergeDeep, getIn, setIn, and updateIn, found on List, Map and OrderedMap.
+``` 
 
+A few power-tools allow for reading and operating on nested data.   
+The most useful are mergeDeep, getIn, setIn, and updateIn, found on List, Map and OrderedMap.
+```sh
 var nested2 = nested.mergeDeep({a:{b:{d:6}}});
 // Map { a: Map { b: Map { c: List [ 3, 4, 5 ], d: 6 } } }
 nested2.getIn(['a', 'b', 'd']); // 6
@@ -189,7 +193,8 @@ Lazy Seq
 
 Seq describes a lazy operation, allowing them to efficiently chain use of all the Iterable methods (such as map and filter).
 
-Seq is immutable — Once a Seq is created, it cannot be changed, appended to, rearranged or otherwise modified.   
+Seq is immutable — Once a Seq is created, it cannot be changed, appended to, rearranged or otherwise modified.  
+
 Instead, any mutative method called on a Seq will return a new Seq.
 
 Seq is lazy — Seq does as little work as necessary to respond to any method call.
