@@ -2,8 +2,24 @@
 
 https://www.youtube.com/watch?v=e-5obm1G_FY
 
+## immutable.js
 
-https://facebook.github.io/immutable-js/
+> https://facebook.github.io/immutable-js/  
+> 
+
+
+## mori
+
+> http://swannodette.github.io/mori/  
+> https://www.npmjs.com/package/mori  
+> https://github.com/ufo-github/mori/tree/master/Tutorails
+
+A library for using ClojureScript's persistent data structures and supporting API from the comfort of vanilla JavaScript.
+
+Clojure === java ?
+
+ClojureScript === js compiler
+
 
 
 
